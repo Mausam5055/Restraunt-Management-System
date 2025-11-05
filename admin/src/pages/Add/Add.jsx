@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Add.css';
 import { assets } from '../../assets/assets';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import PropTypes from 'prop-types';
+
 const Add = ({url}) => {
   
   const [image,setImage]=useState(false);
@@ -80,7 +82,7 @@ else{
           </div>
           <div className="add-price flex-col">
             <p>Product price</p>
-            <input onChange={onChangeHandler} value={data.price} type="Number" name='price' placeholder='$20'/>
+            <input onChange={onChangeHandler} value={data.price} type="Number" name='price' placeholder='₹20'/>
           </div>
         </div>
         <button type='submit' className='add-btn'>ADD</button>
@@ -88,5 +90,9 @@ else{
     </div>
   );
 }
+
+Add.propTypes = {
+  url: PropTypes.string.isRequired
+};
 
 export default Add;

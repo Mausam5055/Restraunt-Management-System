@@ -1,7 +1,9 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import './List.css'
+import PropTypes from 'prop-types'
+
 const List = ({url}) => {
   
   const [list,setList] = useState([])
@@ -47,7 +49,7 @@ else{
 <img src={`${url}/images/`+item.image} alt="" />
 <p>{item.name}</p>
 <p>{item.category}</p>
-<p>${item.price}</p>
+<p>₹{item.price}</p>
 <p className='cursor' onClick={()=>removeFood(item._id)}>X</p>
               </div>
              )
@@ -56,5 +58,9 @@ else{
     </div>
   )
 }
+
+List.propTypes = {
+  url: PropTypes.string.isRequired
+};
 
 export default List
