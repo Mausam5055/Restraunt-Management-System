@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
 import { Route, Routes } from 'react-router-dom'
@@ -7,8 +6,13 @@ import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const App = () => {
-  const url = "http://localhost:4000"
+  // Use localhost for development, production URL for production
+  const url = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? "http://localhost:4000" 
+    : "https://restraunt-management-system-backend.onrender.com";
+    
   return (
     <div>
       <ToastContainer/>
