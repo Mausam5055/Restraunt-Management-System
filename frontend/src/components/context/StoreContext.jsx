@@ -1,11 +1,16 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import PropTypes from 'prop-types';
+
 export const StoreContext=createContext(null);
 
 const StoreContextProvider=(props)=>{
 const [cartItems,setCartItems]=useState({});
 
-const url = "https://restraunt-management-system-backend.onrender.com";
+// Use localhost for development, production URL for production
+const url = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+  ? "http://localhost:4000" 
+  : "https://restraunt-management-system-backend.onrender.com";
 const [token,setToken]= useState("");
 const [food_list,setFoodList] = useState([]);
 
@@ -80,5 +85,9 @@ loadData();
         </StoreContext.Provider>
     )
 }
+
+StoreContextProvider.propTypes = {
+    children: PropTypes.node.isRequired
+};
 
 export default StoreContextProvider;
