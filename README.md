@@ -120,10 +120,7 @@ Restaurant-Management-System/
 ## 🖼️ Screenshots
 
 ### User Interface
-![Home Page](https://github.com/user-attachments/assets/3b0f10b7-dcca-4afd-acaa-61d1cc842406)
-
-
-
+![Home Page](./frontend/public/preview.png)
 
 ## 🔄 Workflow
 
