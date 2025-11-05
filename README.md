@@ -121,13 +121,9 @@ Restaurant-Management-System/
 
 ### User Interface
 ![Home Page](https://github.com/user-attachments/assets/3b0f10b7-dcca-4afd-acaa-61d1cc842406)
-![Menu](https://github.com/user-attachments/assets/a1fd233a-20e5-413c-a26a-5b3c553f6570)
-![Cart](https://github.com/user-attachments/assets/62979ae3-2876-444c-8982-58e81e682b37)
 
-### Admin Dashboard
-![Admin Dashboard](https://github.com/user-attachments/assets/1e013722-1b11-4f66-b53a-9f5ef7325943)
-![Food Management](https://github.com/user-attachments/assets/86865f6f-6bdf-4581-8089-23e3c03af013)
-![Order Management](https://github.com/user-attachments/assets/021a5175-87bf-460f-aae7-8198e6d7e890)
+
+
 
 ## 🔄 Workflow
 
